@@ -1,0 +1,82 @@
+// Colors
+// Fonts
+// Breakpoints
+
+// Descriptive Color Name Variables
+
+$turquoise              : #4EDCB9;
+$malibu                 : #47D8FB;
+$emerald                : #58C577;
+$sunglo                 : #E0696F;
+$persimmon              : #FD6C4C;
+$wisteria               : #8770B9;
+$white                  : #fff;
+$black                  : #454545;
+$grey                   : #696969;
+
+
+// Color Functions Variables
+
+$color-primary          : $turquoise;
+$color-accent           : $malibu;
+
+$color-text-base        : $grey;
+$color-text-light       : $white;
+$color-text-dark        : $black;
+
+$color-body             : $white;
+
+// UI Colors
+
+$ui-colors  : (
+    default : $malibu,
+    success : $emerald,
+    error   : $sunglo,
+    warning : $persimmon,
+    info    : $wisteria
+);
+
+// Grid BG Color
+
+$grid-bg-colors: (
+    col--2  : lighten($turquoise, 20%),
+    col--3  : lighten($wisteria, 25%),
+    col--4  : lighten($malibu, 20%),
+    col--5  : lighten($emerald, 20%),
+    col--6  : darken($malibu, 30%),
+    col--7  : lighten($sunglo, 15%),
+    col--8  : lighten($persimmon, 15%),
+    col--9  : lighten($turquoise, 20%),
+    col--10 : lighten($turquoise, 20%),
+    col--11 : lighten($turquoise, 20%),
+    col--12 : lighten($turquoise, 20%)
+);
+
+// Font Stack Variables
+
+$stack-primary          : 'Helvetica Neue', Helvetica, Arial, ssns-serif;
+
+// Font Weight
+
+$font-weight-thin       : 100;
+$font-weight-light      : 300;
+$font-weight-regular    : 400;
+$font-weight-bold       : 700;
+
+// Font Style
+
+$font-style-italic      : italic;
+
+// Border Radius
+
+$br                     : 10px;
+
+// Breakpoints
+
+$brk-point              : '(min-width: 769px)';
+
+// Grid
+
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;

@@ -1,0 +1,32 @@
+/*
+Image:
+.img--logo
+.img--frame
+.img--avatar
+*/
+
+.img--logo,
+.img--frame,
+.img--avatar {
+    @extend %image;
+}
+
+.img--logo {
+    @include centered(120px);
+    @media (min-width: 769px) {
+        margin-left: 0;
+    }
+}
+
+.img--frame {
+    @include centered;
+    padding: 1em;
+    border: 1px solid $grey;
+}
+
+.img--avatar {
+    @include centered(60%);
+    @media (min-width: 769px) {
+        @include centered;
+    }
+}

@@ -1,0 +1,48 @@
+/*
+Buttons:
+.btn--default
+.btn--success
+.btn--error
+.btn--warning
+.btn--info
+.theme__colors
+*/
+
+.theme__colors {
+    @extend %theme_colors;
+}
+
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info {
+    color: $color-text-light;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    @media (min-width: 769px) {
+        width: 16%;
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+}
+
+
+.btn {
+    &--default {
+        background-color: map-get($ui-colors, default);
+    }
+    &--success {
+        background-color: map-get($ui-colors, success);
+    }
+    &--error {
+        background-color: map-get($ui-colors, error);
+    }
+    &--warning {
+        background-color: map-get($ui-colors, warning);
+    }
+    &--info {
+        background-color: map-get($ui-colors, info);
+    }
+}

@@ -1,0 +1,22 @@
+/*
+Forms:
+.form
+.form__label--hidden
+.form__input
+*/
+
+.form {
+    @include flex($dir: column);
+}
+
+.form__label--hidden {
+    display: none;
+}
+
+.form__input {
+    @extend %form_input;
+    & + button {
+        width: 100%;
+        margin-top: 2em;
+    }
+}

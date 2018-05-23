@@ -1,0 +1,37 @@
+/*
+Typography:
+.container
+.link
+.blockquote
+.headline--primary
+.headline--secondary
+*/
+
+.container {
+    @include text(1em, $l-height: 1.5, $color: $color-text-base);
+    font-family: $stack-primary;
+}
+
+.link {
+    @extend %link;
+    @include text(1em, $weight: $font-weight-bold, $color: $color-accent);
+}
+
+.blockquote {
+    @include text(1.4em, $weight: $font-weight-regular, $style: $font-style-italic);
+    border-left: 6px solid $color-primary;
+    border-radius: $br;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+.headline {
+    &--primary {
+        @include text(2em,$l-height: 1, $weight: $font-weight-bold, $color: $color-primary);
+        @extend %headline;
+        margin-left: 1em;
+    }
+    &--secondary {
+        @extend %headline;
+    }
+}

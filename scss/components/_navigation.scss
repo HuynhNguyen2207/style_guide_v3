@@ -1,0 +1,13 @@
+.nav {
+    @media (min-width: 679px) {
+        float: right;
+        margin-top: 2em;
+    }
+}
+
+.nav__item {
+    @extend %nav_item;
+    @media (min-width: 769px) {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,102 @@
+/*
+Grid:
+.container
+.grid__row
+.grid__col--2
+.grid__col--3
+.grid__col--4
+.grid__col--5
+.grid__col--6
+.grid__col--7
+.grid__col--8
+.grid__col--9
+.grid__col--10
+.grid__col--11
+.grid__col--12
+.centered
+.theme__colors
+*/
+.container {
+    @include centered(80%);
+    @include flex($dir: column);
+    max-width: 1400px;
+    padding: 2em 0;
+}
+
+.centered {
+    @include centered;
+}
+
+.grid__row {
+    margin: 1em 0;
+    @media (min-width: 769px) {
+        @include flex($just: space-around);
+    }
+}
+
+.theme__colors.grid__col {
+    &--12 {
+        background-color: map-get($grid-bg-colors, col--12);
+    }
+
+    &--11 {
+        background-color: map-get($grid-bg-colors, col--11);
+    }
+
+    &--10 {
+        background-color: map-get($grid-bg-colors, col--10);
+    }
+
+    &--19 {
+        background-color: map-get($grid-bg-colors, col--9);
+    }
+
+    &--8 {
+        background-color: map-get($grid-bg-colors, col--8);
+    }
+
+    &--7 {
+        background-color: map-get($grid-bg-colors, col--7);
+    }
+
+    &--6 {
+        background-color: map-get($grid-bg-colors, col--6);
+    }
+
+    &--5 {
+        background-color: map-get($grid-bg-colors, col--5);
+    }
+
+    &--4 {
+        background-color: map-get($grid-bg-colors, col--4);
+    }
+
+    &--3 {
+        background-color: map-get($grid-bg-colors, col--3);
+    }
+
+    &--2 {
+        background-color: map-get($grid-bg-colors, col--2);
+    }
+}
+
+// Calculate grid columns
+@media (min-width: 769px) {
+    @for $i from 1 through $g-col-count {
+        $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
+        $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+        // Generate column modifier classes
+        .grid__col--#{$i} {
+            width: ($target / $context) * 100%;
+        }
+    }
+}
+
+// Column styles
+[class^="grid__col--"] {
+    @media (min-width: 769px) {
+        @include doubly(($g-gutter-width / $context) * 100%);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

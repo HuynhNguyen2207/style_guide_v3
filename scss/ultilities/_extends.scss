@@ -1,0 +1,53 @@
+// Links
+// Images
+// Headlines
+// Nav Items
+
+%link {
+    @include text(1em, $color: $color-text-base);
+    font-family: $stack-primary;
+    text-decoration: none;
+}
+
+%nav_item {
+    text-align: center;
+    padding: 1em;
+    border-radius: $br;
+
+    a {
+        @extend %link;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+
+        a {
+            color: $color-text-light;
+        }
+    }
+}
+
+%image {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+%headline {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-weight: $font-weight-light;
+}
+
+%form_input {
+    padding: 1.5em;
+    border: none;
+    border-bottom: 6px solid $color-primary;
+}
+
+%theme_colors {
+    padding: 1.5em;
+    margin: 0.25em 0;
+    border: none;
+    border-radius: $br;
+}
