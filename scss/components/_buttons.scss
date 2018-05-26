@@ -21,7 +21,7 @@ Buttons:
     text-align: center;
     text-transform: uppercase;
     width: 100%;
-    @media (min-width: 769px) {
+    @include media(medium) {
         width: 16%;
         margin-left: 0.25em;
         margin-right: 0.25em;

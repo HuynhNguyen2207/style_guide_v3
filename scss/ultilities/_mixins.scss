@@ -1,6 +1,23 @@
 // Media Queries
-@mixin media() {
-
+@mixin media($brk) {
+  @if ($brk == 'small') {
+    @media (min-width: 375px) {
+      @content;
+    }
+  }
+  @else if ($brk == 'medium') {
+    @media (min-width: 769px) {
+      @content;
+    }
+  }
+  @else if ($brk == 'large') {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @else {
+    @error 'The input for media query must be small, medium or large!';
+  }
 }
 
 

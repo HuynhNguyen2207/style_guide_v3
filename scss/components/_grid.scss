@@ -29,7 +29,7 @@ Grid:
 
 .grid__row {
     margin: 1em 0;
-    @media (min-width: 769px) {
+    @include media(medium) {
         @include flex($just: space-around);
     }
 }
@@ -81,7 +81,7 @@ Grid:
 }
 
 // Calculate grid columns
-@media (min-width: 769px) {
+@include media(medium) {
     @for $i from 1 through $g-col-count {
         $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
         $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
@@ -94,7 +94,7 @@ Grid:
 
 // Column styles
 [class^="grid__col--"] {
-    @media (min-width: 769px) {
+    @include media(medium) {
         @include doubly(($g-gutter-width / $context) * 100%);
         padding-left: 10px;
         padding-right: 10px;

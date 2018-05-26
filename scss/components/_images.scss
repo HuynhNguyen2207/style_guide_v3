@@ -13,7 +13,7 @@ Image:
 
 .img--logo {
     @include centered(120px);
-    @media (min-width: 769px) {
+    @include media(medium) {
         margin-left: 0;
     }
 }
@@ -26,7 +26,7 @@ Image:
 
 .img--avatar {
     @include centered(60%);
-    @media (min-width: 769px) {
+    @include media(medium) {
         @include centered;
     }
 }
